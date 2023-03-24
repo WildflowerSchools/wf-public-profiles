@@ -52,7 +52,7 @@ def update_public_profiles(db: Session):
             if member["avatarUrl"]:
                 new_public_profile.img_url = f"https://app.holaspirit.com/{member['avatarUrl']}"
             else:
-                new_public_profile.img_url = f"{settings.APP_URL}/public_profiles/static/flower.png"
+                new_public_profile.img_url = f"{settings.APP_URL}/static/flower.png"
 
             for custom_field_key in member["customFields"]:
                 custom_field = member["customFields"][custom_field_key]
