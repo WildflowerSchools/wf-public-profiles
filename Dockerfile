@@ -18,4 +18,4 @@ ADD /wf_public_profiles /app/wf_public_profiles
 
 CMD sh /app/start_public_profiles_service.sh
 
-EXPOSE 4050
+EXPOSE 4050  # This is ignored by Heroku, which assigns and exposes a random PORT

@@ -1,11 +1,10 @@
-import os
-
 from typing import Any, Dict, List, Optional, Union
 from pydantic import AnyHttpUrl, BaseSettings, PostgresDsn, validator
 
 
 class Settings(BaseSettings):
     APP_URL: str = "http://localhost"
+    PORT: int = 4050
     BACKEND_CORS_ORIGINS: List[AnyHttpUrl] = []
 
     @validator("BACKEND_CORS_ORIGINS", pre=True)
