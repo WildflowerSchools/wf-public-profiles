@@ -5,10 +5,10 @@ publish: build
     poetry publish
 
 format:
-    black MODULE_NAME
+    black wf_public_profiles
 
 lint:
-    pylint MODULE_NAME
+    pylint wf_public_profiles
 
 test:
     pytest tests/

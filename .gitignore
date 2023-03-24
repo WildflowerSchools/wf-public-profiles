@@ -21,6 +21,7 @@ share/python-wheels/
 .installed.cfg
 *.egg
 .env
+.docker.env
 .venv
 env/
 venv/

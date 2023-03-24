@@ -1,18 +1,18 @@
 [project]
-name = "PROJECT_NAME"
+name = "wf-public-profiles"
 dynamic = ["version"]
 
 [tool.poetry]
-name = "PROJECT_NAME"
-version = "0.1.0"
+name = "wf-public-profiles"
+version = "1.0.0"
 description = ""
-authors = ["NAME <EMAIL>"]
-maintainers = ["NAME <EMAIL>"]
+authors = ["Benjamin Jaffe-Talberg <ben.talberg@wildflowerschools.org>"]
+maintainers = []
 readme = "README.md"
 keywords = []
-repository = "<<GITHUB URL>>"
+repository = "https://github.com/WildflowerSchools/wf-public-profiles"
 license = "MIT"
-packages = [{include = "MODULE_NAME"}]
+packages = [{include = "wf-public-profiles"}]
 classifiers = [
     "Intended Audience :: Developers",
     "License :: OSI Approved :: MIT License",
@@ -21,8 +21,18 @@ classifiers = [
 ]
 
 [tool.poetry.dependencies]
-python = "^3.8"
+python = "^3.11"
 toml = "^0.10.2"
+requests = "^2.28.2"
+alembic = "^1.10.2"
+sqlalchemy = "^2.0.7"
+pydantic = "^1.10.7"
+fastapi = "^0.95.0"
+uvicorn = {extras = ["standard"], version = "^0.21.1"}
+python-dotenv = "^1.0.0"
+psycopg2 = "^2.9.5"
+apscheduler = "^3.10.1"
+python-dateutil = "^2.8.2"
 
 [tool.poetry.group.dev.dependencies]
 black = "^22.10.0"
@@ -31,7 +41,7 @@ pytest = "^7.2.0"
 
 [tool.black]
 line-length = 120
-target-version = ['py38']
+target-version = ['py311']
 
 [tool.setuptools]
 py-modules = []
