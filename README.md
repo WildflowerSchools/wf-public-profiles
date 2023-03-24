@@ -1,10 +1,10 @@
-# MODULE_NAME
+# wf-public-profiles
 
-SHORT_DESCRIPTION
+A simple app that ingests Wildflower people info from HolaSpirit and serves it as JSON 
 
-## Installation
+## Production
 
-`pip install PYPI_PACKAGE_NAME`
+App is related on Heroku. It is deployed using Heroku + Docker. See the `herkou.yml` file which specifies the Dockerfile that should be run. 
 
 ## Development
 

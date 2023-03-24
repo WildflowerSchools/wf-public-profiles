@@ -27,6 +27,10 @@ target_metadata = Base.metadata
 
 
 def get_url():
+    database_url = os.getenv("DATABASE_URL", None)
+    if database_url is not None:
+        return database_url
+
     return "postgresql://%s:%s@%s:%s/%s" % (
         os.getenv("POSTGRES_USER", "postgres"),
         os.getenv("POSTGRES_PASSWORD", "iamaninsecurepassword"),
