@@ -1,3 +1,5 @@
+import os
+
 from typing import Any, Dict, List, Optional, Union
 from pydantic import AnyHttpUrl, BaseSettings, PostgresDsn, validator
 
@@ -19,9 +21,9 @@ class Settings(BaseSettings):
     POSTGRES_PASSWORD: str = "iamaninsecurepassword"
     POSTGRES_DB: str = "wf-public-profiles"
     POSTGRES_PORT: str = 5432
-    SQLALCHEMY_DATABASE_URI: Optional[PostgresDsn] = None
+    DATABASE_URL: Optional[PostgresDsn] = None
 
-    @validator("SQLALCHEMY_DATABASE_URI", pre=True)
+    @validator("DATABASE_URL", pre=True)
     def assemble_db_connection(cls, v: Optional[str], values: Dict[str, Any]) -> Any:
         if isinstance(v, str):
             return v
