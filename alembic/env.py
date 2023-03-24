@@ -29,6 +29,8 @@ target_metadata = Base.metadata
 def get_url():
     database_url = os.getenv("DATABASE_URL", None)
     if database_url is not None:
+        if database_url.startswith("postgres://"):
+            database_url = database_url.replace("postgres://", "postgresql://", 1)
         return database_url
 
     return "postgresql://%s:%s@%s:%s/%s" % (
