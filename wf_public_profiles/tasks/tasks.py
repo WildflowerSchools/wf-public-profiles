@@ -35,7 +35,7 @@ def update_public_profiles(db: Session):
             page = int(pagination["nextPage"])
 
     def lower_strip(s):
-        s.lower().strip()
+        return s.lower().strip()
 
     ignore = list(map(lower_strip, settings.HOLASPIRIT_PUBLIC_PROFILES_IGNORE))
 
