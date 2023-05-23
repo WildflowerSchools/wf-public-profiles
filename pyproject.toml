@@ -23,7 +23,7 @@ classifiers = [
 [tool.poetry.dependencies]
 python = "^3.11"
 toml = "^0.10.2"
-requests = "^2.28.2"
+requests = "^2.31.0"
 alembic = "^1.10.2"
 sqlalchemy = "^2.0.7"
 pydantic = "^1.10.7"
